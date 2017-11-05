@@ -902,11 +902,16 @@
 		@include vendor('align-items', 'flex-end');
 		@include vendor('justify-content', 'space-between');
 		background-color:		_palette(accent2, bg);
-		background-attachment:	scroll,								fixed;
-		background-image:		url('images/overlay.png'),			url('../../images/mine/proposal_walk_rotate.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto 100%;
+		//background-attachment:	scroll,								fixed;
+		//background-image:		url('images/overlay.png'),			url('../../images/mine/proposal_walk_rotate.jpg');
+		//background-position:	top left,							top left;
+		//background-repeat:		repeat,								no-repeat;
+		//background-size:		auto,								auto 100%;
+		background-attachment:	fixed;
+		background-image:		url('../../images/mine/proposal_walk_rotate.jpg');
+		background-position:	top left;
+		background-repeat:		no-repeat;
+		background-size:		auto 100%;
 		color: _palette(accent2, fg);
 		height: 100%;
 		left: 0;
@@ -1202,6 +1207,7 @@
 		/* Header */
 
 			#header {
+                background-position: -100px;
 				padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 				width: $size-header-width;
 
@@ -1268,9 +1274,12 @@
 		/* Header */
 
 			#header {
-				background-attachment:	scroll;
-				background-position:	top left,	center center;
-				background-size:		auto,		cover;
+				//background-attachment:	scroll;
+				//background-position:	top left,	center center;
+				//background-size:		auto,		cover;
+				background-attachment:  scroll;
+				background-position:	center center;
+				background-size:		cover;
 				left: auto;
 				padding: ($size-header-pad * 1.5) $size-header-pad;
 				position: relative;

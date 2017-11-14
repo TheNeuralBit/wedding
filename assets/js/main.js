@@ -9,7 +9,7 @@
 	var settings = {
 
 		// Parallax background effect?
-			parallax: true,
+			parallax: false,
 
 		// Parallax factor (lower = more intense, higher = less intense).
 			parallaxFactor: 20
@@ -109,12 +109,12 @@
 
 				}
 
-		// Main Sections: Two.
+		// Main Sections: Pictures.
 
 			// Lightbox gallery.
 				$window.on('load', function() {
 
-					$('#two').poptrox({
+					$('#pictures').poptrox({
 						caption: function($a) { return $a.next('h3').text(); },
 						overlayColor: '#2c2c2c',
 						overlayOpacity: 0.85,

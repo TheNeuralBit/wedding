@@ -1,1 +1,1 @@
-Basesd on "Twenty" from HTML5UP
+Based on "Twenty" from HTML5UP

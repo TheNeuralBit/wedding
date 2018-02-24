@@ -12,6 +12,13 @@
 	@return val($font, $keys...);
 }
 
+/// Gets a heading font value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _heading_font($keys...) {
+	@return val($heading_font, $keys...);
+}
+
 /// Gets a misc value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.

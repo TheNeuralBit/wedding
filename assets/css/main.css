@@ -984,6 +984,9 @@ body, input, select, textarea {
   font-size: 16pt;
   font-weight: 400;
   line-height: 1.75em; }
+  body:disabled, input:disabled, select:disabled, textarea:disabled {
+    background-color: #e7e7e7 !important;
+    border-color: #e7e7e7 !important; }
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;

@@ -63,6 +63,10 @@
 		font-size: 16pt;
 		font-weight: _font(weight);
 		line-height: 1.75em;
+        &:disabled {
+			background-color: _palette(border2-bg) !important;
+			border-color: _palette(border2-bg) !important;
+        }
 	}
 
 	a {

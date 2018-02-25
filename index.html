@@ -38,13 +38,13 @@
             date, then Meredith came back up to Northern Virginia for a New
             Year's party, and not long after that our relationship was
             official.
+            </p>
 
             <p>After countless more drives up and down both I-95 and US-29, one
             trip to italy, and a couple moves to Charlottesville, we're finally
             getting married, and we can't wait to celebrate with all of you!
-						<!--<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-            </ul>-->
+            </p>
+            <center><a href="#rsvp" class="button special">RSVP Now!</a></center>
 					</section>
         <!-- Events -->
         <section id="events">
@@ -237,42 +237,75 @@
 					</section>
 
 				<!-- RSVP -->
-					<!--<section id="rsvp">
+					<section id="rsvp">
 						<h2>RSVP</h2>
-						<p>Come back here to RSVP after we send out invitations!</p>
 						<div class="row">
-							<div class="8u 12u$(small)">
-								<form method="post" action="#">
+							<div class="12u">
+								<form method="post" action="https://formspree.io/admin@meredithandbrian.wedding">
 									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                    <input type="hidden" name="_next" value="http://meredithandbrian.wedding/thanks.html" />
+                    <div class="4u$ 12u$(xsmall)">
+                      <div class="select-wrapper">
+                        <select name="rsvp" required>
+                          <option value="" disabled selected>RSVP:</option>
+                          <option value="yes">Yes</option>
+                          <option value="no">Decline with regrets</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+									<div class="row uniform 50%">
+										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" required/></div>
+										<div class="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email (optional)" /></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="name_plus_one" id="name_plus_one" placeholder="Name (+1)" /></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="children" id="children" placeholder="Children" /></div>
+                    <div class="12u">
+                      <div class="select-wrapper">
+                        <select name="bus">
+                          <option value="" disabled selected>Will you be taking the bus?</option>
+                          <option value="holiday inn">Yes, from the Holiday Inn</option>
+                          <option value="downtown">Yes, from Downtown</option>
+                          <option value="no">No, I'll provide my own transportation</option>
+                          <option value="maybe">Not sure yet</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="12u">
+                      <div class="select-wrapper">
+                      <select name="friday">
+                        <option value="" disabled selected>Are you planning to attend the Welcome Reception on Friday?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="maybe">Not sure yet</option>
+                      </select>
+                      </div>
+                    </div>
+										<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                    <div class="12u">
+                      <ul class="actions">
+								    	  <li><input type="submit" value="Submit" /></li>
+								      </ul>
+                    </div>
 									</div>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="4u$ 12u$(small)">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon fa-home"><span class="label">Address</span></h3>
-										4000 City Walk Way<br />
-										Charlottesville, VA 22902<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
 							</div>
 						</div>
-          </section>-->
+          </section>
+  <script type="text/javascript">
+    var rsvp     = document.getElementsByName('rsvp')[0],
+        bus      = document.getElementsByName('bus')[0]
+        friday   = document.getElementsByName('friday')[0]
+        plus_one = document.getElementsByName('name_plus_one')[0]
+        children = document.getElementsByName('children')[0]
+        ;
+    function updateFormAttributes() {
+      var rsvp_yes = (rsvp.value == 'yes');
+      friday.required = bus.required = rsvp_yes;
+      friday.disabled = bus.disabled = plus_one.disabled = children.disabled = !rsvp_yes;
+    }
+    rsvp.onchange = updateFormAttributes;
+    updateFormAttributes();
+  </script>
 
 				<!-- Four -->
 				<!--
@@ -603,7 +636,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             <!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
 						<li><a href="https://github.com/TheNeuralBit/wedding" class="icon fa-github"><span class="label">Github</span></a></li>
             <!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-						<li><a href="mailto:mpearson25@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><a href="mailto:admin@meredithandbrian.wedding" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; 2017 Meredith Pearson and Brian Hulette</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>

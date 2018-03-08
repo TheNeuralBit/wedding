@@ -1193,6 +1193,16 @@ textarea {
     width: 2.75em; }
   .select-wrapper select::-ms-expand {
     display: none; }
+  .select-wrapper.special select {
+    background-color: #49bf9d;
+    border-color: #49bf9d;
+    color: #ffffff !important; }
+    .select-wrapper.special select:hover {
+      background-color: #5cc6a7;
+      border-color: #5cc6a7; }
+    .select-wrapper.special select:active {
+      background-color: #3eb08f;
+      border-color: #3eb08f; }
 
 input[type="text"],
 input[type="password"],

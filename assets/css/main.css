@@ -1126,6 +1126,21 @@ header h6 + p {
 header.major h2 {
   font-size: 2em; }
 
+.faq p {
+  position: relative;
+  margin: 0 0 1.5em 0; }
+
+.faq h2 + p {
+  margin-top: -1em; }
+
+.faq h3 + p {
+  margin-top: -1em; }
+
+.faq h4 + p,
+.faq h5 + p,
+.faq h6 + p {
+  margin-top: -1em; }
+
 /* Form */
 form {
   margin: 0 0 2em 0; }
